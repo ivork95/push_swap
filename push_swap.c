@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 15:39:00 by ivork         #+#    #+#                 */
-/*   Updated: 2021/05/20 21:52:25 by ivork         ########   odam.nl         */
+/*   Updated: 2021/05/21 18:51:36 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,19 +35,6 @@ int check_argument(char *str)
 	return (1);
 }
 
-void	stack_iter(t_stack *stack_a)
-{
-	t_stack *current;
-
-	current = stack_a;
-	while (current)
-	{
-		printf("%d\n", current->num);
-		current = current->next;
-	}
-}
-
-
 t_stack	*create_new_node(void)
 {
 	t_stack	*first;
@@ -63,9 +50,6 @@ t_stack *fill_stack(int argc, char **argv, t_stack *stack_a)
 	int i;
 
 	i = 1;
-	stack_a = create_new_node();
-	if (stack_a == NULL)
-		return (NULL);
 	tmp = stack_a;
 	while (i < argc)
 	{
@@ -86,22 +70,24 @@ t_stack *fill_stack(int argc, char **argv, t_stack *stack_a)
 int	main(int argc, char **argv)
 {
 	t_stack *stack_a;
-	t_stack *stack_b;
+	int 	len;
 
 	if (argc < 2)
 	{
 		write(2, "Error\n", 6);
 		return (0);
 	}
+	stack_a = create_new_node();
+	if (stack_a == NULL)
+		return (0);
 	stack_a = fill_stack(argc, argv, stack_a);
 	if (stack_a == NULL)
 	{
 		write(2, "Error\n", 6);
 		return (0);
 	}
-	stack_push(&stack_a, &stack_b);
-	// stack_iter(stack_a);
-	// printf("---------\n");
-	// stack_iter(stack_b);
+	len = stack_len(stack_a);
+	if (len <= 5)
+		sort_short(stack_a, len);
 	return(0);
 }
