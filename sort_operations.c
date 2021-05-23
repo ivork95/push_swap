@@ -6,26 +6,27 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 18:40:15 by ivork         #+#    #+#                 */
-/*   Updated: 2021/05/21 17:20:19 by ivork         ########   odam.nl         */
+/*   Updated: 2021/05/23 18:34:03 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
+#include "libft/libft.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
 
-void	stack_swap(t_stack *stack)
+void	swap_stack(t_stack *stack, char *str)
 {
 	int tmp;
-
 
 	tmp = stack->num;
 	stack->num = stack->next->num;
 	stack->next->num = tmp;
+	write(2, str, ft_strlen(str));
 }
 
-void 	stack_push(t_stack **stack1, t_stack **stack2)
+void 	push_stack(t_stack **stack1, t_stack **stack2, char *str)
 {
 	t_stack *tmp;
 
@@ -44,9 +45,10 @@ void 	stack_push(t_stack **stack1, t_stack **stack2)
 		tmp->next = *stack2;
 		*stack2 = tmp;
 	}
+	write(2, str, ft_strlen(str));
 }
 
-void	rotate_stack(t_stack **stack)
+void	rotate_stack(t_stack **stack, char *str)
 {
 	t_stack *tmp;
 
@@ -58,10 +60,11 @@ void	rotate_stack(t_stack **stack)
 	tmp = *stack;
 	*stack = (*stack)->next;
 	tmp->next = NULL;
-	stack_last(*stack)->next = tmp; 
+	stack_last(*stack)->next = tmp;
+	write(2, str, ft_strlen(str));
 }
 
-void	reverse_rotate_stack(t_stack **stack)
+void	reverse_rotate_stack(t_stack **stack, char *str)
 {
 	t_stack *tmp;
 	t_stack *tmp2;
@@ -72,5 +75,6 @@ void	reverse_rotate_stack(t_stack **stack)
 		tmp2 = tmp2->next;
 	tmp2->next = NULL;
 	tmp->next = *stack;
-	*stack =  tmp; 
+	*stack =  tmp;
+	write(2, str, ft_strlen(str));
 }

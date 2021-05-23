@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 19:01:01 by ivork         #+#    #+#                 */
-/*   Updated: 2021/05/21 17:20:38 by ivork         ########   odam.nl         */
+/*   Updated: 2021/05/23 17:14:22 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,38 @@ int	stack_len(t_stack *stack)
 		i++; 
 	}
 	return (i);
+}
+
+int	is_biggest(t_stack *stack)
+{
+	int biggest;
+
+	biggest = stack->num ;
+	while (stack)
+	{
+		if (stack->num > biggest)
+		{
+			biggest = stack->num;
+			return (0);
+		}
+		stack = stack->next;
+	}
+	return (1);
+}
+
+int	is_smallest(t_stack *stack)
+{
+	int smallest;
+
+	smallest = stack->num ;
+	while (stack)
+	{
+		if (stack->num < smallest)
+		{
+			smallest = stack->num;
+			return (0);
+		}
+		stack = stack->next;
+	}
+	return (1);
 }
