@@ -6,12 +6,19 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 15:40:08 by ivork         #+#    #+#                 */
-/*   Updated: 2021/05/23 17:14:22 by ivork         ########   odam.nl         */
+/*   Updated: 2021/05/25 16:25:14 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
+
+typedef struct		s_tree
+{
+	int				value;
+	struct s_tree	*left;
+	struct s_tree	*right;
+}					t_tree;
 
 typedef struct		s_stack
 {

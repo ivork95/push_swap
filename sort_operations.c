@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 18:40:15 by ivork         #+#    #+#                 */
-/*   Updated: 2021/05/23 18:34:03 by ivork         ########   odam.nl         */
+/*   Updated: 2021/05/25 15:10:52 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,6 @@ void	reverse_rotate_stack(t_stack **stack, char *str)
 		tmp2 = tmp2->next;
 	tmp2->next = NULL;
 	tmp->next = *stack;
-	*stack =  tmp;
+	*stack = tmp;
 	write(2, str, ft_strlen(str));
 }
