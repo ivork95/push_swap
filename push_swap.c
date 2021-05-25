@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 15:39:00 by ivork         #+#    #+#                 */
-/*   Updated: 2021/05/25 16:25:14 by ivork         ########   odam.nl         */
+/*   Updated: 2021/05/25 17:21:30 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ int	main(int argc, char **argv)
 	if (stack_a == NULL)
 		return (0);
 	stack_a = fill_stack(argc, argv, stack_a);
+	tree  = fill_tree(argc, argv, tree);
 	if (stack_a == NULL)
 	{
 		write(2, "Error\n", 6);
