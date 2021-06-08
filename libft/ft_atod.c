@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/04 17:39:30 by ivork         #+#    #+#                 */
-/*   Updated: 2021/05/04 20:29:39 by ivork         ########   odam.nl         */
+/*   Updated: 2021/06/08 13:13:46 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,10 @@ double	ft_atod(const char *str)
 	int			i;
 	int			count_min;
 	double		x;
-	double		y;
 
 	i = 0;
 	count_min = 0;
 	x = 0;
-	y = 0;
 	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
 		i++;
 	if (str[i] == '-')
