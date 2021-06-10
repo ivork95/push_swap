@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 15:40:08 by ivork         #+#    #+#                 */
-/*   Updated: 2021/06/08 16:30:38 by ivork         ########   odam.nl         */
+/*   Updated: 2021/06/10 18:55:20 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,13 @@ typedef struct		s_stack
 	struct s_stack	*next;	
 }					t_stack;
 
+typedef struct		t_tuple
+{
+	int				value;
+	int				index;
+}					t_tuple;
+
+
 t_stack	*create_new_node(void);
 t_tree 	*fill_tree(t_stack *stack);
 t_stack	*stack_last(t_stack *stack);
@@ -38,5 +45,6 @@ void 	push_stack(t_stack **stack1, t_stack **stack2, char *str);
 void	rotate_stack(t_stack **stack, char *str);
 void	reverse_rotate_stack(t_stack **stack, char *str);
 void	sort_short(t_stack **stack_a, int len);
+void	sort_long(t_stack **stack, t_tree *tree, int len);
 
 #endif

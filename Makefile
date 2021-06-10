@@ -6,7 +6,7 @@
 #    By: ivork <ivork@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/05/21 18:14:25 by ivork         #+#    #+#                  #
-#    Updated: 2021/06/09 15:17:45 by ivork         ########   odam.nl          #
+#    Updated: 2021/06/10 14:36:13 by ivork         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ SRCS	=	push_swap.c\
 			sort_operations.c\
 			sort_stack.c\
 			sort_short.c\
+			sort_long.c\
 			tree.c\
 			helper.c
 FLAGS	=	-Wall -Werror -Wextra

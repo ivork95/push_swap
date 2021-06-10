@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/25 17:19:32 by ivork         #+#    #+#                 */
-/*   Updated: 2021/06/09 17:15:36 by ivork         ########   odam.nl         */
+/*   Updated: 2021/06/10 17:25:52 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,37 +35,27 @@ t_tree *fill_tree(t_stack *stack)
 	stack = stack->next;
 	while(stack != NULL)
 	{
-		printf("stack = %d\n", stack->num);
-		printf("tmp = %d\n", tmp->num);
 		if (stack->num > tmp->num)
 		{
 			if (tmp->right == NULL)
 			{
-				tree->right = create_new_tree(stack->num);
-				printf("ADD right = %d\n", stack->num);
+				tmp->right = create_new_tree(stack->num);
 				stack = stack->next;
 				tmp = tree;
 			}
 			else
-			{
 				tmp = tmp->right;
-				printf("R++\n");
-			}
 		}
 		else if (stack->num < tmp->num)
 		{
 			if (tmp->left == NULL)
 			{
-				tree->left = create_new_tree(stack->num);
-				printf("ADD left = %d\n", stack->num);
+				tmp->left = create_new_tree(stack->num);
 				stack = stack->next;
 				tmp = tree;
 			}
 			else
-			{
 				tmp = tmp->left;
-				printf("L++\ntmp = %d\n", tmp->num);
-			}
 		}
 	}
 	return (tree);
