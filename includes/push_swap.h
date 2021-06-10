@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 15:40:08 by ivork         #+#    #+#                 */
-/*   Updated: 2021/05/25 16:25:14 by ivork         ########   odam.nl         */
+/*   Updated: 2021/06/08 16:30:38 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 typedef struct		s_tree
 {
-	int				value;
+	int				num;
 	struct s_tree	*left;
 	struct s_tree	*right;
 }					t_tree;
@@ -27,6 +27,7 @@ typedef struct		s_stack
 }					t_stack;
 
 t_stack	*create_new_node(void);
+t_tree 	*fill_tree(t_stack *stack);
 t_stack	*stack_last(t_stack *stack);
 int		stack_len(t_stack *stack);
 int		is_smallest(t_stack *stack);

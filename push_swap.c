@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 15:39:00 by ivork         #+#    #+#                 */
-/*   Updated: 2021/05/25 17:21:30 by ivork         ########   odam.nl         */
+/*   Updated: 2021/06/09 17:15:49 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,12 +67,32 @@ t_stack *fill_stack(int argc, char **argv, t_stack *stack_a)
 	return (stack_a);
 }
 
+void print_tree(t_tree *tree)
+{
+	t_tree *tmp;
+
+	tmp = tree;
+	while(1)
+	{
+		if (tmp->left != NULL)
+			tmp = tmp->left; 
+		else if (tmp->right != NULL)
+			tmp = tmp->right;
+		else if (tmp->left == NULL && tmp->right == NULL)
+		{
+			printf("%d\n", tmp->num);
+			tmp = NULL;
+			break;
+		}
+	}
+}
+
 int	main(int argc, char **argv)
 {
 	t_stack *stack_a;
 	t_tree *tree;
 
-	int 	len;
+	// int 	len;
 
 	if (argc < 2)
 	{
@@ -83,18 +103,19 @@ int	main(int argc, char **argv)
 	if (stack_a == NULL)
 		return (0);
 	stack_a = fill_stack(argc, argv, stack_a);
-	tree  = fill_tree(argc, argv, tree);
+	tree  = fill_tree(stack_a);
 	if (stack_a == NULL)
 	{
 		write(2, "Error\n", 6);
 		return (0);
 	}
-	len = stack_len(stack_a);
-	if (len <= 5)
-		sort_short(&stack_a, len);
-	else {
-		sort_long(&stack_a, len);
-	}
-	stack_iter(stack_a);
+	// len = stack_len(stack_a);
+	print_tree(tree);
+	// if (len <= 5)
+	// 	sort_short(&stack_a, len);
+	// else {
+	// 	sort_long(&stack_a, len);
+	// }
+	// stack_iter(stack_a);
 	return(0);
 }
