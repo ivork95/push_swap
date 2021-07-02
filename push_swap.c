@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 15:39:00 by ivork         #+#    #+#                 */
-/*   Updated: 2021/06/10 19:06:50 by ivork         ########   odam.nl         */
+/*   Updated: 2021/06/25 12:41:18 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,10 +81,8 @@ void	print_tree(t_tree *tree)
 int	main(int argc, char **argv)
 {
 	t_stack *stack_a;
-	t_tree *tree;
 
 	int 	len;
-
 	if (argc < 2)
 	{
 		write(2, "Error\n", 6);
@@ -94,7 +92,7 @@ int	main(int argc, char **argv)
 	if (stack_a == NULL)
 		return (0);
 	stack_a = fill_stack(argc, argv, stack_a);
-	tree  = fill_tree(stack_a);
+	// tree  = fill_tree(stack_a);
 	if (stack_a == NULL)
 	{
 		write(2, "Error\n", 6);
@@ -105,7 +103,8 @@ int	main(int argc, char **argv)
 		sort_short(&stack_a, len);
 	else
 	{
-		sort_long(&stack_a, tree, len);
+		sort_long(&stack_a, len);
 	}
+	// stack_iter(stack_a);
 	return(0);
 }

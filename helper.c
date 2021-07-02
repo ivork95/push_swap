@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 19:01:01 by ivork         #+#    #+#                 */
-/*   Updated: 2021/05/23 17:14:22 by ivork         ########   odam.nl         */
+/*   Updated: 2021/06/11 21:28:59 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,39 @@ int	is_smallest(t_stack *stack)
 			return (0);
 		}
 		stack = stack->next;
+	}
+	return (1);
+}
+
+int find_biggest(int *arr, int len)
+{
+	int biggest;
+	int i;
+
+	i = 0;
+	biggest = arr[i] ;
+	while (i < len)
+	{
+		if (arr[i] > biggest)
+			biggest = arr[i];
+		i++;
+	}
+	return (biggest);	
+}
+
+int smallest_num(int *arr, int value, int len)
+{
+	int x;
+
+	x = 0;
+	while (x < len)
+	{
+		if (arr[x] < value)
+		{
+			value = arr[x];
+			return (0);
+		}
+		x++;
 	}
 	return (1);
 }

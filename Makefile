@@ -6,7 +6,7 @@
 #    By: ivork <ivork@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/05/21 18:14:25 by ivork         #+#    #+#                  #
-#    Updated: 2021/06/10 14:36:13 by ivork         ########   odam.nl          #
+#    Updated: 2021/06/25 14:22:57 by ivork         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRCS	=	push_swap.c\
 			sort_long.c\
 			tree.c\
 			helper.c
-FLAGS	=	-Wall -Werror -Wextra
+FLAGS	=	-Wall -Werror -Wextra -g
 LIBFT	=	libft/libft.a
 OBJS	= 	$(SRCS:%.c=%.o)
 
