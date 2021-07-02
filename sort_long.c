@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/25 15:11:00 by ivork         #+#    #+#                 */
-/*   Updated: 2021/06/25 15:56:43 by ivork         ########   odam.nl         */
+/*   Updated: 2021/07/02 14:33:39 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,21 @@ int *get_index(int *arr, int *index, t_stack *stack, int len)
 	int j;
 
 	j = 0;
+	stack_iter(stack);
 	while (j < len)
 	{
+		printf("test2\n");
 		i = 0;
 		tmp = stack;
-		while (tmp->num != arr[j])
+		while (tmp->num != arr[j] && stack_len(stack) > 1 && tmp != NULL)
 		{
+			printf("tmp=%p\ntmpnum=%d\ntmpnext=%p\n", tmp, tmp->num, tmp->next);
 			tmp = tmp->next;
+			if (tmp == NULL)
+				break;
 			i++;
 		}
+		printf("test22\n");
 		index[j] = i;
 		j++;
 	}
@@ -73,7 +79,7 @@ int	find_closest(int *index, int len)
 	int middle;
 
 	x = 0;
-	middle = len / 2 + 1;
+	middle = len / 2;
 	cost = middle;
 	while (x < (len / 6))
 	{
@@ -102,9 +108,9 @@ void push_to_b(t_stack **stack_a, t_stack **stack_b, int x, int len)
 {
 	int count;
 
-
 	count = x;
-	printf("stacknum = %p\n", *stack_b);
+	if (count > len / 2)
+		count = len - x;
 	while (count > 0)
 	{
 		if(x > len / 2)
@@ -116,13 +122,10 @@ void push_to_b(t_stack **stack_a, t_stack **stack_b, int x, int len)
 		count--;
 	}
 	push_stack(stack_a, stack_b, "pa\n");
-	printf("__________________\n");
-	// stack_iter(stack_b);
 }
 
 int *remove_num(int *arr, int num)
 {
-	printf("num = %d\n", num);
 	int  i;
 
 	i = 0;
@@ -149,6 +152,7 @@ void	sort_long(t_stack **stack_a, int len)
 	current = *stack_a;
 	x = 0;
 	count = len;
+	stack_b = NULL;
 	while (current)
 	{
 		arr[x] = current->num;
@@ -156,17 +160,19 @@ void	sort_long(t_stack **stack_a, int len)
 		x++;
 	}
 	arr = sort_array(arr, len);
-	while (count > 1)
+	while (count > 0)
 	{
 		index = get_index(arr, index, *stack_a, (len / 6));
 		x = find_closest(index, len);
-		printf("index = %d\n", x);
 		push_to_b(stack_a, &stack_b, x, len);
 		arr = remove_num(arr, stack_b->num);
 		count--;
-		stack_iter(*stack_a);
+		printf("-------------------\n");
 	}
-	// stack_iter(stack_b);
+	printf("stack_b\n");
+	stack_iter(stack_b);
+	printf("stack_a\n");
+	stack_iter(*stack_a);
 }
 
 
