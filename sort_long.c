@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/25 15:11:00 by ivork         #+#    #+#                 */
-/*   Updated: 2021/07/02 14:33:39 by ivork         ########   odam.nl         */
+/*   Updated: 2021/09/29 20:27:35 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define CHUNK 6
 int *get_index(int *arr, int *index, t_stack *stack, int len)
 {
 	t_stack *tmp;
@@ -24,18 +25,15 @@ int *get_index(int *arr, int *index, t_stack *stack, int len)
 	stack_iter(stack);
 	while (j < len)
 	{
-		printf("test2\n");
 		i = 0;
 		tmp = stack;
 		while (tmp->num != arr[j] && stack_len(stack) > 1 && tmp != NULL)
 		{
-			printf("tmp=%p\ntmpnum=%d\ntmpnext=%p\n", tmp, tmp->num, tmp->next);
 			tmp = tmp->next;
 			if (tmp == NULL)
 				break;
 			i++;
 		}
-		printf("test22\n");
 		index[j] = i;
 		j++;
 	}
@@ -71,17 +69,19 @@ int *sort_array(int *arr, int len)
 	return (sorted_arr);
 }
 
-int	find_closest(int *index, int len)
+int	find_closest(int *index, int len, int chunk_size)
 {
 	int x;
 	int i;
 	int cost;
 	int middle;
-
+	
+	if (len == 1)
+		return (index[0]);
 	x = 0;
 	middle = len / 2;
 	cost = middle;
-	while (x < (len / 6))
+	while (x < (chunk_size))
 	{
 		if (index[x] <= middle)
 		{
@@ -148,7 +148,7 @@ void	sort_long(t_stack **stack_a, int len)
 	int count;
 
 	arr = malloc(sizeof(int) * len);
-	index = malloc(sizeof(int) * len / 6);
+	index = malloc(sizeof(int) * len / CHUNK);
 	current = *stack_a;
 	x = 0;
 	count = len;
@@ -163,7 +163,7 @@ void	sort_long(t_stack **stack_a, int len)
 	while (count > 0)
 	{
 		index = get_index(arr, index, *stack_a, (len / 6));
-		x = find_closest(index, len);
+		x = find_closest(index, stack_len(*stack_a), len / CHUNK);
 		push_to_b(stack_a, &stack_b, x, len);
 		arr = remove_num(arr, stack_b->num);
 		count--;
