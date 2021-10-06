@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/21 18:32:08 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/05 21:22:56 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/06 10:46:39 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	sort_short(t_stack **stack_a, int len)
 	if (stack_b != NULL)
 	{
 		push_stack(&stack_b, stack_a, "pa\n");
-		if (is_biggest(*stack_a))
+		if (is_biggest(*stack_a, (*stack_a)->num))
 			rotate_stack(stack_a, "ra\n");
 		else if ((*stack_a)->num > (*stack_a)->next->num && 
 				(*stack_a)->num > (*stack_a)->next->next->num)
@@ -62,13 +62,13 @@ void	sort_short(t_stack **stack_a, int len)
 			rotate_stack(stack_a, "ra\n");
 			rotate_stack(stack_a, "ra\n");
 		}
-		else if (!(is_smallest(*stack_a)))
+		else if (!(is_smallest(*stack_a, (*stack_a)->num)))
 			swap_stack(*stack_a, "sa\n");
 	}
 	if (stack_b != NULL)
 	{
 		push_stack(&stack_b, stack_a, "pa\n");
-		if (is_biggest(*stack_a))
+		if (is_biggest(*stack_a, (*stack_a)->num))
 		{
 			rotate_stack(stack_a, "ra\n");
 		}

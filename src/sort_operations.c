@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 18:40:15 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/05 21:22:39 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/06 10:44:05 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	swap_stack(t_stack *stack, char *str)
 	tmp = stack->num;
 	stack->num = stack->next->num;
 	stack->next->num = tmp;
-	write(2, str, ft_strlen(str));
+	write(1, str, ft_strlen(str));
 }
 
 void 	push_stack(t_stack **stack1, t_stack **stack2, char *str)
@@ -45,7 +45,7 @@ void 	push_stack(t_stack **stack1, t_stack **stack2, char *str)
 		tmp->next = *stack2;
 		*stack2 = tmp;
 	}
-	write(2, str, ft_strlen(str));
+	write(1, str, ft_strlen(str));
 }
 
 void	rotate_stack(t_stack **stack, char *str)
@@ -61,7 +61,7 @@ void	rotate_stack(t_stack **stack, char *str)
 	*stack = (*stack)->next;
 	tmp->next = NULL;
 	stack_last(*stack)->next = tmp;
-	write(2, str, ft_strlen(str));
+	write(1, str, ft_strlen(str));
 }
 
 void	reverse_rotate_stack(t_stack **stack, char *str)
@@ -76,5 +76,5 @@ void	reverse_rotate_stack(t_stack **stack, char *str)
 	tmp2->next = NULL;
 	tmp->next = *stack;
 	*stack = tmp;
-	write(2, str, ft_strlen(str));
+	write(1, str, ft_strlen(str));
 }

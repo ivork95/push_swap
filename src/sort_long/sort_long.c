@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/25 15:11:00 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/05 22:31:24 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/06 11:43:24 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define CHUNK 6
+#define CHUNK 20
 
 int	*get_index(int *arr, int *index, t_stack *stack, int len)
 {
@@ -107,14 +107,14 @@ void	sort_long(t_stack **stack_a, int len)
 	int		index;
 	int		num;
 
-	index_arr = malloc(sizeof(int) * len / CHUNK);
+	index_arr = malloc(sizeof(int) * CHUNK);
 	count = len;
 	stack_b = NULL;
 	arr = create_sorted_array(*stack_a, len);
 	while (count > 0)
 	{
-		index_arr = get_index(arr, index_arr, *stack_a, (len / CHUNK));
-		index = find_index_closest(index_arr, stack_len(*stack_a), (len / CHUNK));
+		index_arr = get_index(arr, index_arr, *stack_a, CHUNK);
+		index = find_index_closest(index_arr, stack_len(*stack_a), CHUNK);
 		num = next_push(*stack_a, index);
 		sort_b(&stack_b, num);
 		push_to_b(stack_a, &stack_b, index, stack_len(*stack_a));
@@ -125,34 +125,3 @@ void	sort_long(t_stack **stack_a, int len)
 	while (stack_b)
 		push_stack(&stack_b, stack_a, "pa\n");
 }
-
-
-
-
-
-
-// int *sort_array(int *arr, int len)
-// {
-// 	t_stack *tmp;
-// 	int biggest;
-// 	int x;
-
-// 	tmp = stack;
-// 	biggest = find_biggest(stack);
-// 	x = 0;
-// 	while (tmp)
-// 	{
-// 		if (is_smallest(tmp))
-// 		{
-// 			arr[x] = tmp->num;
-// 			if (tmp->num == biggest)
-// 				break ;
-// 			tmp->num = biggest;
-// 			tmp = stack;
-// 			x++;
-// 		}
-// 		else
-// 			tmp = tmp->next;
-// 	}
-// 	return (arr);
-// }
