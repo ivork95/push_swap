@@ -6,18 +6,18 @@
 #    By: ivork <ivork@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/05/21 18:14:25 by ivork         #+#    #+#                  #
-#    Updated: 2021/06/25 14:22:57 by ivork         ########   odam.nl          #
+#    Updated: 2021/10/05 22:08:17 by ivork         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	push_swap
-SRCS	=	push_swap.c\
-			sort_operations.c\
-			sort_stack.c\
-			sort_short.c\
-			sort_long.c\
-			tree.c\
-			helper.c
+SRCS	=	src/push_swap.c\
+			src/sort_operations.c\
+			src/sort_short/sort_short.c\
+			src/sort_long/sort_long.c\
+			src/sort_long/sort_array.c\
+			src/sort_long/sort_b.c\
+			src/helper.c
 FLAGS	=	-Wall -Werror -Wextra -g
 LIBFT	=	libft/libft.a
 OBJS	= 	$(SRCS:%.c=%.o)

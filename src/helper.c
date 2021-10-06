@@ -6,11 +6,11 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 19:01:01 by ivork         #+#    #+#                 */
-/*   Updated: 2021/06/11 21:28:59 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/05 22:28:30 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "../includes/push_swap.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -48,11 +48,8 @@ int	stack_len(t_stack *stack)
 	return (i);
 }
 
-int	is_biggest(t_stack *stack)
+int	is_biggest(t_stack *stack, int biggest)
 {
-	int biggest;
-
-	biggest = stack->num ;
 	while (stack)
 	{
 		if (stack->num > biggest)
@@ -65,11 +62,8 @@ int	is_biggest(t_stack *stack)
 	return (1);
 }
 
-int	is_smallest(t_stack *stack)
+int	is_smallest(t_stack *stack, int smallest)
 {
-	int smallest;
-
-	smallest = stack->num ;
 	while (stack)
 	{
 		if (stack->num < smallest)
