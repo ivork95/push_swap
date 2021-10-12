@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/29 13:51:26 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/12 17:50:43 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/12 19:54:33 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		}
 	}
 	else
+	{
 		while (i < n)
 		{
 			((char *)dest)[i] = ((const char *)src)[i];
 			i++;
 		}
+	}
 	return (dest);
 }
