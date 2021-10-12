@@ -6,13 +6,13 @@
 /*   By: anonymous <anonymous@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/26 17:27:02 by anonymous     #+#    #+#                 */
-/*   Updated: 2021/04/30 17:42:56 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/12 17:41:24 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int		ft_read(int fd, char *buff, int ret)
+int	ft_read(int fd, char *buff, int ret)
 {
 	ret = read(fd, buff, BUFFER_SIZE);
 	if (ret < 0)
@@ -21,7 +21,7 @@ int		ft_read(int fd, char *buff, int ret)
 	return (ret);
 }
 
-int		get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
 	static char	buff[BUFFER_SIZE + 1];
 	int			ret;

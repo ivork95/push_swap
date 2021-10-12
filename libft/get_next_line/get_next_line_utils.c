@@ -6,15 +6,15 @@
 /*   By: anonymous <anonymous@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/04 11:40:12 by anonymous     #+#    #+#                 */
-/*   Updated: 2021/04/30 17:42:56 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/12 17:42:00 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int		ft_strichr(char *str, char c)
+int	ft_strichr(char *str, char c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -28,7 +28,7 @@ int		ft_strichr(char *str, char c)
 
 char	*ft_strmove(char *dest, char *src)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!(ft_strchr(dest, '\n')))
@@ -50,7 +50,7 @@ char	*ft_strcjoin(char *s1, char *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	newstr = (char*)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	newstr = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	i = 0;
 	n = 0;
 	if (newstr == NULL)

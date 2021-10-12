@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/10 21:11:53 by ivork         #+#    #+#                 */
-/*   Updated: 2020/11/18 13:01:35 by anonymous     ########   odam.nl         */
+/*   Updated: 2021/10/12 17:52:34 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *new_element;
+	t_list	*new_element;
 
 	new_element = (t_list *)malloc(sizeof(t_list));
 	if (new_element == NULL)

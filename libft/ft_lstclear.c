@@ -6,7 +6,7 @@
 /*   By: anonymous <anonymous@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/22 18:05:55 by anonymous     #+#    #+#                 */
-/*   Updated: 2020/11/22 18:25:37 by anonymous     ########   odam.nl         */
+/*   Updated: 2021/10/12 17:52:55 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list *current;
+	t_list	*current;
 
 	current = *lst;
 	if (current->next != NULL)

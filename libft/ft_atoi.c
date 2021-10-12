@@ -6,14 +6,14 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 20:52:30 by ivork         #+#    #+#                 */
-/*   Updated: 2021/05/20 18:17:56 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/12 17:54:00 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *str)
 {
-	int			i;
-	int			count_min;
+	int					i;
+	int					count_min;
 	unsigned long int	x;
 
 	i = 0;
@@ -28,8 +28,8 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		x = x * 10 + str[i] - '0';
-		if ((x > 2147483648 && count_min == 1) ||
-		(x > 2147483647 && count_min == 0))
+		if ((x > 2147483648 && count_min == 1)
+			|| (x > 2147483647 && count_min == 0))
 			return (0);
 		i++;
 	}

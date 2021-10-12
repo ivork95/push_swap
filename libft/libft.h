@@ -6,17 +6,19 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/05 12:55:29 by ivork         #+#    #+#                 */
-/*   Updated: 2021/05/04 20:30:32 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/12 17:56:35 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
-# include <stddef.h>
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+#  include <stdlib.h>
+#  include <unistd.h>
+#  include <stddef.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -68,7 +70,7 @@ void				ft_lstdelone(t_list *lst, void (*del)(void*));
 void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
-					void (*del)(void *));
+						void (*del)(void *));
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 int					ft_lstsize(t_list *lst);
@@ -78,15 +80,12 @@ void				ft_lstdelone(t_list *lst, void (*del)(void*));
 void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
-					void (*del)(void *));
+						void (*del)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
-					void (*del)(void *));
-// get_next_line
-#ifndef BUFFER_SIZE
-# define BUFFER_SIZE 42
-#endif
+						void (*del)(void *));
 int					get_next_line(int fd, char **line);
 int					ft_strichr(char *str, char c);
 char				*ft_strcjoin(char *s1, char *s2);
 char				*ft_strmove(char *dest, char *src);
+# endif
 #endif

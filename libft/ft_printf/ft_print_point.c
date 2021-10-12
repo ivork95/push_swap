@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/16 13:43:19 by ivork         #+#    #+#                 */
-/*   Updated: 2021/02/12 10:41:27 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/12 17:44:09 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	ft_print_point(unsigned long long x, t_flags flag)
 	char	*str;
 
 	base = "0123456789abcdef";
-	str = (char*)malloc(sizeof(char) * 11);
+	str = (char *)malloc(sizeof(char) * 11);
 	if (str == NULL)
 	{
 		g_count = -1;

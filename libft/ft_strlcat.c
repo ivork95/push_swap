@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 21:10:30 by ivork         #+#    #+#                 */
-/*   Updated: 2020/11/17 13:48:34 by anonymous     ########   odam.nl         */
+/*   Updated: 2021/10/12 17:49:00 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {
-	size_t i;
-	size_t j;
-	size_t dstlen;
-	size_t srclen;
+	size_t	i;
+	size_t	j;
+	size_t	dstlen;
+	size_t	srclen;
 
 	i = 0;
 	j = 0;

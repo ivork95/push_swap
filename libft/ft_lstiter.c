@@ -6,7 +6,7 @@
 /*   By: anonymous <anonymous@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/22 18:26:19 by anonymous     #+#    #+#                 */
-/*   Updated: 2020/11/22 18:35:18 by anonymous     ########   odam.nl         */
+/*   Updated: 2021/10/12 17:52:48 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list *current;
+	t_list	*current;
 
 	current = lst;
 	while (current)

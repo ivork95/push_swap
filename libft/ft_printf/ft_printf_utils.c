@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/15 22:52:08 by ivork         #+#    #+#                 */
-/*   Updated: 2021/02/12 11:18:20 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/12 17:42:37 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include "ft_printf.h"
 
-void		ft_putnstr_fd(char *s, int fd, int n)
+void	ft_putnstr_fd(char *s, int fd, int n)
 {
 	int	i;
 
@@ -57,7 +57,7 @@ static char	*ft_convnum(char *s, long long int n, int x)
 	return (s);
 }
 
-char		*ft_uitoa(unsigned int n)
+char	*ft_uitoa(unsigned int n)
 {
 	unsigned long	x;
 	int				count;
@@ -81,7 +81,7 @@ char		*ft_uitoa(unsigned int n)
 	return (ft_convnum(str, n, count));
 }
 
-t_flags		ft_init_flag(void)
+t_flags	ft_init_flag(void)
 {
 	t_flags	flag;
 

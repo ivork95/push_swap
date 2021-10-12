@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 19:57:53 by ivork         #+#    #+#                 */
-/*   Updated: 2020/11/30 17:52:52 by anonymous     ########   odam.nl         */
+/*   Updated: 2021/10/12 17:47:33 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	is_in_set(char c, const char *set)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (set[i] != 0)
@@ -26,7 +26,7 @@ static int	is_in_set(char c, const char *set)
 	return (0);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*newstr;
 	int		start;

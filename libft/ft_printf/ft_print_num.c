@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/15 23:10:02 by ivork         #+#    #+#                 */
-/*   Updated: 2021/02/14 14:06:54 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/12 17:44:22 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	ft_print_hexa(unsigned int x, t_flags flag)
 		base = "0123456789abcdef";
 	else
 		base = "0123456789ABCDEF";
-	str = (char*)malloc(sizeof(char) * 9);
+	str = (char *)malloc(sizeof(char) * 9);
 	if (str == NULL)
 	{
 		g_count = -1;

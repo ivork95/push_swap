@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/15 22:39:36 by ivork         #+#    #+#                 */
-/*   Updated: 2021/05/04 15:15:41 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/12 17:42:49 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdbool.h>
 # include "../libft.h"
 
-typedef struct		s_flags
+typedef struct s_flags
 {
 	char			specifier;
 	int				count;

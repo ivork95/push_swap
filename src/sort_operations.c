@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 18:40:15 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/06 10:44:05 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/12 17:17:43 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 void	swap_stack(t_stack *stack, char *str)
 {
-	int tmp;
+	int	tmp;
 
 	tmp = stack->num;
 	stack->num = stack->next->num;
@@ -26,13 +26,13 @@ void	swap_stack(t_stack *stack, char *str)
 	write(1, str, ft_strlen(str));
 }
 
-void 	push_stack(t_stack **stack1, t_stack **stack2, char *str)
+void	push_stack(t_stack **stack1, t_stack **stack2, char *str)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	if (*stack2 == NULL)
 	{
-		*stack2 =  create_new_node();
+		*stack2 = create_new_node();
 		if (*stack2 == NULL)
 			exit (0);
 		(*stack2)->num = (*stack1)->num;
@@ -50,7 +50,7 @@ void 	push_stack(t_stack **stack1, t_stack **stack2, char *str)
 
 void	rotate_stack(t_stack **stack, char *str)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	if (!*stack)
 	{
@@ -66,8 +66,8 @@ void	rotate_stack(t_stack **stack, char *str)
 
 void	reverse_rotate_stack(t_stack **stack, char *str)
 {
-	t_stack *tmp;
-	t_stack *tmp2;
+	t_stack	*tmp;
+	t_stack	*tmp2;
 
 	tmp = stack_last(*stack);
 	tmp2 = *stack;

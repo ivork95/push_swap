@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/15 22:39:26 by ivork         #+#    #+#                 */
-/*   Updated: 2021/02/15 12:59:15 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/12 17:43:25 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	ft_check_speci(t_flags flag, va_list ap)
 	else if (flag.specifier == 'c')
 		ft_print_char(va_arg(ap, int), flag);
 	else if (flag.specifier == 's')
-		ft_print_str(va_arg(ap, char*), flag);
+		ft_print_str(va_arg(ap, char *), flag);
 	else if ((flag.specifier == 'i') || (flag.specifier == 'd'))
 		ft_print_int(va_arg(ap, int), flag);
 	else if (flag.specifier == 'u')
@@ -58,7 +58,7 @@ void	ft_check_speci(t_flags flag, va_list ap)
 		ft_print_point(va_arg(ap, unsigned long long), flag);
 }
 
-int		ft_check_flags(const char *str, int i, va_list ap)
+int	ft_check_flags(const char *str, int i, va_list ap)
 {
 	t_flags	flag;
 
@@ -78,7 +78,7 @@ int		ft_check_flags(const char *str, int i, va_list ap)
 	return (i);
 }
 
-int		ft_printf(const char *str, ...)
+int	ft_printf(const char *str, ...)
 {
 	va_list	ap;
 	int		i;

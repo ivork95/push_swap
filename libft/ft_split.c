@@ -6,15 +6,15 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 21:11:29 by ivork         #+#    #+#                 */
-/*   Updated: 2020/12/04 20:58:35 by anonymous     ########   odam.nl         */
+/*   Updated: 2021/10/12 17:50:11 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			ft_free_array(char **array, int x)
+void	ft_free_array(char **array, int x)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < x)
@@ -47,11 +47,11 @@ static size_t	ft_count_words(char const *s, char c)
 	return (words);
 }
 
-static char		**ft_fill_in(char **array, const char *s, char c, int splits)
+static char	**ft_fill_in(char **array, const char *s, char c, int splits)
 {
-	int		i;
-	int		j;
-	int		k;
+	int	i;
+	int	j;
+	int	k;
 
 	k = 0;
 	i = 0;
@@ -74,7 +74,7 @@ static char		**ft_fill_in(char **array, const char *s, char c, int splits)
 	return (array);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		words;
 	char	**arr;
@@ -82,7 +82,7 @@ char			**ft_split(char const *s, char c)
 	if (!s)
 		return (0);
 	words = ft_count_words(s, c);
-	arr = (char**)malloc(sizeof(char*) * words + 1);
+	arr = (char **)malloc(sizeof(char *) * words + 1);
 	if (arr == NULL)
 		return (NULL);
 	arr[words] = NULL;
