@@ -6,13 +6,12 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/12 17:21:55 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/12 17:28:24 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/13 17:30:27 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 int	find_next_smallest(t_stack *stack, int num)
 {

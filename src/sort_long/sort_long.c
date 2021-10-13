@@ -6,15 +6,12 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/25 15:11:00 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/12 17:05:46 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/13 17:34:14 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
-#include <stdio.h>
 #include <stdlib.h>
-
-#define CHUNK 6
 
 int	*get_index_arr(int *arr, int *index, t_stack *stack, int len)
 {
@@ -98,7 +95,7 @@ int	next_push(t_stack *stack, int index)
 	return (stack->num);
 }
 
-void	sort_long(t_stack **stack_a, int len)
+void	sort_long(t_stack **stack_a, int len, int chunk)
 {
 	t_stack	*stack_b;
 	int		*arr;
@@ -106,13 +103,13 @@ void	sort_long(t_stack **stack_a, int len)
 	int		index;
 	int		num;
 
-	index_arr = malloc(sizeof(int) * CHUNK);
+	index_arr = malloc(sizeof(int) * chunk);
 	stack_b = NULL;
 	arr = create_sorted_array(*stack_a, len);
 	while (len > 0)
 	{
-		index_arr = get_index_arr(arr, index_arr, *stack_a, CHUNK);
-		index = find_index_closest(index_arr, stack_len(*stack_a), CHUNK);
+		index_arr = get_index_arr(arr, index_arr, *stack_a, chunk);
+		index = find_index_closest(index_arr, stack_len(*stack_a), chunk);
 		num = next_push(*stack_a, index);
 		sort_b(&stack_b, num);
 		push_to_b(stack_a, &stack_b, index, stack_len(*stack_a));

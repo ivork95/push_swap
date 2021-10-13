@@ -6,14 +6,13 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 18:40:15 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/12 17:17:43 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/13 17:29:21 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 #include "../libft/libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 #include <unistd.h>
 
 void	swap_stack(t_stack *stack, char *str)
@@ -53,10 +52,7 @@ void	rotate_stack(t_stack **stack, char *str)
 	t_stack	*tmp;
 
 	if (!*stack)
-	{
-		write(2, "Error\n", 6);
-		exit (0);
-	}
+		err_func();
 	tmp = *stack;
 	*stack = (*stack)->next;
 	tmp->next = NULL;

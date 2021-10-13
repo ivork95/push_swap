@@ -6,13 +6,12 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/21 18:32:08 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/12 19:52:30 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/13 17:31:26 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 #include <unistd.h>
-#include <stdio.h>
 
 t_stack	*sort_three(t_stack *stack)
 {

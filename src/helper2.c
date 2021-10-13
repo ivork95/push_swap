@@ -6,13 +6,12 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/12 17:20:22 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/12 17:29:36 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/13 17:30:39 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 int	find_biggest(int *arr, int len)
 {

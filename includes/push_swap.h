@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 15:40:08 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/12 17:33:27 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/13 17:37:40 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ typedef struct t_tuple
 
 t_stack	*create_new_node(void);
 t_stack	*stack_last(t_stack *stack);
+t_stack	*fill_stack(int argc, char **argv, t_stack *stack_a);
+int		check_argument(char *str);
 int		*remove_num(int *arr, int num);
 int		*create_sorted_array(t_stack *stack_a, int len);
 int		*sort_array(int *arr, int len);
@@ -41,13 +43,13 @@ int		find_next_smallest(t_stack *stack, int num);
 int		get_index(t_stack **stack, int num);
 int		is_ordered(t_stack *stack);
 int		is_sorted(t_stack *stack);
-void	stack_iter(t_stack *stack_a);
+void	err_func(void);
 void	swap_stack(t_stack *stack, char *str);
 void	push_stack(t_stack **stack1, t_stack **stack2, char *str);
 void	rotate_stack(t_stack **stack, char *str);
 void	reverse_rotate_stack(t_stack **stack, char *str);
 void	sort_short(t_stack **stack_a, int len);
-void	sort_long(t_stack **stack, int len);
+void	sort_long(t_stack **stack, int len, int chunk);
 void	sort_b(t_stack **stack, int num);
 void	biggest_to_top(t_stack **stack);
 
