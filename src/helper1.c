@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/13 14:39:47 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/13 17:26:07 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/13 21:40:21 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 void	check_duplicates(t_stack *stack_a)
 {
-	t_stack *current;
+	t_stack	*current;
 
 	while (stack_a)
 	{

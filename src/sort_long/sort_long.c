@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/25 15:11:00 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/13 17:34:14 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/13 21:47:29 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,4 +119,5 @@ void	sort_long(t_stack **stack_a, int len, int chunk)
 	biggest_to_top(&stack_b);
 	while (stack_b)
 		push_stack(&stack_b, stack_a, "pa\n");
+	free_stack(stack_b);
 }

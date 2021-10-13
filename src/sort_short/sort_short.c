@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/21 18:32:08 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/13 17:31:26 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/13 21:07:02 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,4 +105,5 @@ void	sort_short(t_stack **stack_a, int len)
 		push_stack(&stack_b, stack_a, "pa\n");
 	}
 	smallest_to_top(stack_a);
+	free_stack(stack_b);
 }

@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/12 17:21:55 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/13 17:30:27 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/13 21:09:51 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,4 +84,16 @@ int	get_index(t_stack **stack, int num)
 		return (find_index_biggest(*stack));
 	else
 		return (find_next_smallest(*stack, num));
+}
+
+void	free_stack(t_stack *stack)
+{
+	t_stack	*tmp;
+
+	while (stack != NULL)
+	{
+		tmp = stack;
+		stack = stack->next;
+		free(tmp);
+	}
 }

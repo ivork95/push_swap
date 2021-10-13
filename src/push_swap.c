@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 15:39:00 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/13 17:37:08 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/13 21:49:20 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
-	
+	int		chunk;
+
 	if (argc < 2)
 		err_func();
 	stack_a = create_new_node();
@@ -27,11 +28,13 @@ int	main(int argc, char **argv)
 		err_func();
 	if (is_sorted(stack_a))
 		return (0);
+	chunk = argc / 25;
+	if (chunk == 0)
+		chunk = 1;
 	if (argc <= 6)
 		sort_short(&stack_a, (argc - 1));
 	else
-	{
-		sort_long(&stack_a, (argc - 1), (argc / 25));
-	}
+		sort_long(&stack_a, (argc - 1), chunk);
+	free_stack(stack_a);
 	return (0);
 }
