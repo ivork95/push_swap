@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/05 17:17:24 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/12 17:03:51 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/14 11:55:29 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,69 +16,76 @@
 
 #define CHUNK 6
 
-int	*fill_array(t_stack *stack, int len)
+void fill_array(t_stack *stack, int *arr)
 {
-	int	*arr;
-	int	x;
+    int x;
 
-	arr = malloc(sizeof(int) * len);
-	x = 0;
-	while (stack)
-	{
-		arr[x] = stack->num;
-		stack = stack->next;
-		x++;
-	}
-	return (arr);
+    x = 0;
+    while (stack)
+    {
+        arr[x] = stack->num;
+        stack = stack->next;
+        x++;
+    }
 }
 
-int	*sort_array(int *arr, int len)
+int *sort_array(int *arr, int len)
 {
-	int	*sorted_arr;
-	int	biggest;
-	int	i;
-	int	j;
+    int *sorted_arr;
+    int biggest;
+    int i;
+    int j;
 
-	sorted_arr = malloc(sizeof(int) * len);
-	biggest = find_biggest(arr, len);
-	i = 0;
-	j = 0;
-	while (1)
-	{
-		if (smallest_num(arr, arr[i], len))
-		{
-			sorted_arr[j] = arr[i];
-			if (arr[i] == biggest)
-				break ;
-			arr[i] = biggest;
-			i = 0;
-			j++;
-		}
-		else
-			i++;
-	}
-	return (sorted_arr);
+    sorted_arr = malloc(sizeof(int) * len);
+    biggest = find_biggest(arr, len);
+    i = 0;
+    j = 0;
+    while (1)
+    {
+        if (smallest_num(arr, arr[i], len))
+        {
+            sorted_arr[j] = arr[i];
+            if (arr[i] == biggest)
+                break;
+            arr[i] = biggest;
+            i = 0;
+            j++;
+        }
+        else
+            i++;
+    }
+    free(arr);
+    return (sorted_arr);
 }
 
-int	*create_sorted_array(t_stack *stack_a, int len)
+int *create_sorted_array(t_stack *stack_a, int len)
 {
-	int	*arr;
+    int *arr;
 
-	arr = malloc(sizeof(int) * len);
-	arr = fill_array(stack_a, len);
-	return (sort_array(arr, len));
+    arr = malloc(sizeof(int) * len);
+    fill_array(stack_a, arr);
+    return (sort_array(arr, len));
 }
 
-int	*remove_num(int *arr, int num)
+int *remove_num(int *arr, int num, int len)
 {
-	int	i;
+    int i;
+    int j;
+    int *tmp;
 
-	i = 0;
-	while (arr[i] != num)
-	{
-		i++;
-	}
-	arr[i] = arr[0];
-	arr++;
-	return (arr);
+    tmp = malloc(sizeof(int) * len - 1);
+    i = 0;
+    j = 0;
+    while (len > 0)
+    {
+        if (arr[i] != num)
+        {
+            tmp[j] = arr[i];
+            j++;
+        }
+        i++;
+        len--;
+    }
+    free(arr);
+    return (tmp);
 }
