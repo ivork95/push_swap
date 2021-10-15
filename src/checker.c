@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/12 19:13:42 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/13 17:18:27 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/15 16:38:45 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,10 +84,7 @@ int	main(int argc, char **argv)
 
 	if (argc < 2)
 		err_func();
-	stack_a = create_new_node();
-	if (stack_a == NULL)
-		err_func();
-	stack_a = fill_stack(argc, argv, stack_a);
+	stack_a = fill_stack(argc, argv);
 	if (stack_a == NULL)
 		err_func();
 	read_operations(&stack_a, &stack_b);
