@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/25 15:11:00 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/15 16:02:17 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/19 12:44:57 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int	*get_index_arr(int *arr, int *index, t_stack *stack, int len)
 	int		j;
 
 	j = 0;
+	if (stack_len(stack) < len)
+		len = stack_len(stack);
 	while (j < len)
 	{
 		i = 0;
