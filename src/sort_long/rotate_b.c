@@ -6,12 +6,11 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/05 21:59:38 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/12 17:01:54 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/19 12:50:55 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 void	sort_b(t_stack **stack, int num)

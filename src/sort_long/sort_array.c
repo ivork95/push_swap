@@ -6,15 +6,12 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/05 17:17:24 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/15 13:57:48 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/19 12:51:06 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
-#include <stdio.h>
 #include <stdlib.h>
-
-#define CHUNK 6
 
 void	fill_array(t_stack *stack, int *arr)
 {

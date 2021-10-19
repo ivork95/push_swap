@@ -6,13 +6,12 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 15:39:00 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/15 16:37:03 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/19 12:50:41 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "../includes/push_swap.h"
-#include <stdio.h>
 
 int	main(int argc, char **argv)
 {

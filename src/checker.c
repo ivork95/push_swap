@@ -6,13 +6,12 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/12 19:13:42 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/15 16:38:45 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/19 12:50:37 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/libft.h"
-#include "../includes/push_swap.h"
-#include <stdio.h>
+#include "../includes/push_swap.h" 
 
 void	swap_or_push(t_stack **stack_a, t_stack **stack_b, char *operations)
 {
