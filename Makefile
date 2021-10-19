@@ -6,7 +6,7 @@
 #    By: ivork <ivork@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/05/21 18:14:25 by ivork         #+#    #+#                  #
-#    Updated: 2021/10/19 13:41:13 by ivork         ########   odam.nl          #
+#    Updated: 2021/10/19 19:28:06 by ivork         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRCS_C	=	src/checker.c\
 			src/helper1.c\
 			src/helper2.c\
 			src/helper3.c
-FLAGS	=	-Wall -Werror -Wextra -fsanitize=address -g
+FLAGS	=	-Wall -Werror -Wextra
 LIBFT	=	libft/libft.a
 OBJS_PS	=	$(SRCS_PS:%.c=%.o)
 OBJS_C	=	$(SRCS_C:%.c=%.o)
