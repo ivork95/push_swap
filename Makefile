@@ -6,7 +6,7 @@
 #    By: ivork <ivork@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/05/21 18:14:25 by ivork         #+#    #+#                  #
-#    Updated: 2021/10/19 12:41:59 by ivork         ########   odam.nl          #
+#    Updated: 2021/10/19 12:43:13 by ivork         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,9 +34,9 @@ OBJS_C	=	$(SRCS_C:%.c=%.o)
 
 all: $(NAME)
 $(word 1, $(NAME)): $(LIBFT) $(OBJS_PS)
-	$(CC) $(OBJS_PS) $(LIBFT) -o $(word 1, $(NAME))
+	$(CC) $(FLAGS) $(OBJS_PS) $(LIBFT) -o $(word 1, $(NAME))
 $(word 2, $(NAME)): $(LIBFT) $(OBJS_C)
-	$(CC) $(OBJS_C) $(LIBFT) -o $(word 2, $(NAME))
+	$(CC) $(FLAGS) $(OBJS_C) $(LIBFT) -o $(word 2, $(NAME))
 %.o: %.c
 	$(CC) $(FLAGS) -c $< -o $@
 $(LIBFT):
