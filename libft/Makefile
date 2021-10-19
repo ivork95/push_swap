@@ -6,7 +6,7 @@
 #    By: ivork <ivork@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/05 12:53:39 by ivork         #+#    #+#                  #
-#    Updated: 2021/05/05 14:11:02 by ivork         ########   odam.nl          #
+#    Updated: 2021/10/19 12:41:16 by ivork         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,7 +71,7 @@ OBJS_B	=	$(SRCS_B:.c=.o)
 LIBC	=	ar -rcs
 RM		=	rm -f
 CC		=	gcc
-FLAGS	=	-Wall -Werror -Wextra
+FLAGS	=	-Wall -Werror -Wextra -fsanitize=address -g
 INCS	=	.
 
 RELEVANT_OBJS = $(OBJS) $(OBJS_B)
