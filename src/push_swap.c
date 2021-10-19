@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 15:39:00 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/19 13:29:57 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/19 13:31:47 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(int argc, char **argv)
 	int		chunk;
 
 	if (argc < 2)
-		return ;
+		return (0);
 	stack_a = fill_stack(argc, argv);
 	if (stack_a == NULL)
 		err_func();
