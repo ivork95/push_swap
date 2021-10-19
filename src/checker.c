@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/12 19:13:42 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/19 12:50:37 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/19 19:16:53 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,26 @@
 void	swap_or_push(t_stack **stack_a, t_stack **stack_b, char *operations)
 {
 	if (!ft_strncmp(operations, "sa", 3))
+	{
 		swap_stack(*stack_a, "\0");
+	}
 	else if (!ft_strncmp(operations, "sb", 3))
+	{
 		swap_stack(*stack_b, "\0");
+	}
 	else if (!ft_strncmp(operations, "ss", 3))
 	{
 		swap_stack(*stack_a, "\0");
 		swap_stack(*stack_a, "\0");
 	}
 	else if (!ft_strncmp(operations, "pa", 3))
+	{
 		push_stack(stack_b, stack_a, "\0");
+	}
 	else if (!ft_strncmp(operations, "pb", 3))
+	{
 		push_stack(stack_a, stack_b, "\0");
+	}
 	else
 		err_func();
 }
@@ -37,20 +45,20 @@ void	execute_operations(t_stack **stack_a, t_stack **stack_b,
 {
 	if (operations[0] == 's' || operations[0] == 'p')
 		swap_or_push(stack_a, stack_b, operations);
-	else if (!ft_strncmp(operations, "ra", 3))
+	else if (!ft_strncmp(operations, "ra", 3) && stack_a)
 		rotate_stack(stack_a, "\0");
-	else if (!ft_strncmp(operations, "rb", 3))
+	else if (!ft_strncmp(operations, "rb", 3) && stack_b)
 		rotate_stack(stack_b, "\0");
-	else if (!ft_strncmp(operations, "rr", 3))
+	else if (!ft_strncmp(operations, "rr", 3) && stack_a && stack_b)
 	{
 		rotate_stack(stack_a, "\0");
 		rotate_stack(stack_b, "\0");
 	}
-	else if (!ft_strncmp(operations, "rra", 4))
+	else if (!ft_strncmp(operations, "rra", 4) && stack_a)
 		reverse_rotate_stack(stack_a, "\0");
-	else if (!ft_strncmp(operations, "rrb", 4))
+	else if (!ft_strncmp(operations, "rrb", 4) && stack_a)
 		reverse_rotate_stack(stack_b, "\0");
-	else if (!ft_strncmp(operations, "rrr", 4))
+	else if (!ft_strncmp(operations, "rrr", 4) && stack_a && stack_b)
 	{
 		reverse_rotate_stack(stack_a, "\0");
 		reverse_rotate_stack(stack_b, "\0");
