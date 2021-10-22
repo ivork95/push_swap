@@ -6,14 +6,14 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/12 19:13:42 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/19 19:16:53 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/22 15:36:52 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/libft.h"
 #include "../includes/push_swap.h" 
 
-void	swap_or_push(t_stack **stack_a, t_stack **stack_b, char *operations)
+static void	swap_or_push(t_stack **stack_a, t_stack **stack_b, char *operations)
 {
 	if (!ft_strncmp(operations, "sa", 3))
 	{
@@ -40,7 +40,7 @@ void	swap_or_push(t_stack **stack_a, t_stack **stack_b, char *operations)
 		err_func();
 }
 
-void	execute_operations(t_stack **stack_a, t_stack **stack_b,
+static void	execute_operations(t_stack **stack_a, t_stack **stack_b,
 							char *operations)
 {
 	if (operations[0] == 's' || operations[0] == 'p')
@@ -67,7 +67,7 @@ void	execute_operations(t_stack **stack_a, t_stack **stack_b,
 		err_func();
 }
 
-void	read_operations(t_stack **stack_a, t_stack **stack_b)
+static void	read_operations(t_stack **stack_a, t_stack **stack_b)
 {
 	char	*line;
 	int		ret;

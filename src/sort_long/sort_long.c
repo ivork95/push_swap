@@ -6,14 +6,14 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/25 15:11:00 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/19 12:44:57 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/22 15:40:41 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 #include <stdlib.h>
 
-int	*get_index_arr(int *arr, int *index, t_stack *stack, int len)
+static int	*get_index_arr(int *arr, int *index, t_stack *stack, int len)
 {
 	t_stack	*tmp;
 	int		i;
@@ -39,7 +39,7 @@ int	*get_index_arr(int *arr, int *index, t_stack *stack, int len)
 	return (index);
 }
 
-int	find_index_closest(int *index_arr, int len, int chunk_size)
+static int	find_index_closest(int *index_arr, int len, int chunk_size)
 {
 	int	x;
 	int	middle;
@@ -67,7 +67,7 @@ int	find_index_closest(int *index_arr, int len, int chunk_size)
 	return (closest);
 }
 
-void	push_to_b(t_stack **stack_a, t_stack **stack_b, int x, int len)
+static void	push_to_b(t_stack **stack_a, t_stack **stack_b, int x, int len)
 {
 	int	count;
 
@@ -87,7 +87,7 @@ void	push_to_b(t_stack **stack_a, t_stack **stack_b, int x, int len)
 	push_stack(stack_a, stack_b, "pb\n");
 }
 
-int	next_push(t_stack *stack, int index)
+static int	next_push(t_stack *stack, int index)
 {
 	while (index > 0)
 	{

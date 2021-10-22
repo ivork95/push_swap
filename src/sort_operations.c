@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 18:40:15 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/19 19:27:02 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/22 15:34:53 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-void	swap_stack(t_stack *stack, char *str)
+void	swap_stack(t_stack *stack, const char *str)
 {
 	int	tmp;
 
@@ -28,7 +28,7 @@ void	swap_stack(t_stack *stack, char *str)
 	}
 }
 
-void	push_stack(t_stack **stack1, t_stack **stack2, char *str)
+void	push_stack(t_stack **stack1, t_stack **stack2, const char *str)
 {
 	t_stack	*tmp;
 
@@ -42,7 +42,7 @@ void	push_stack(t_stack **stack1, t_stack **stack2, char *str)
 	}
 }
 
-void	rotate_stack(t_stack **stack, char *str)
+void	rotate_stack(t_stack **stack, const char *str)
 {
 	t_stack	*tmp;
 
@@ -56,7 +56,7 @@ void	rotate_stack(t_stack **stack, char *str)
 	}
 }
 
-void	reverse_rotate_stack(t_stack **stack, char *str)
+void	reverse_rotate_stack(t_stack **stack, const char *str)
 {
 	t_stack	*tmp;
 	t_stack	*tmp2;
