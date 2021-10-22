@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/21 18:32:08 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/22 15:38:13 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/22 15:44:54 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ static void	smallest_to_top(t_stack **stack)
 	}
 }
 
-static void	sort_short(t_stack **stack_a, int len)
+void	sort_short(t_stack **stack_a, int len)
 {
 	t_stack	*stack_b;
 

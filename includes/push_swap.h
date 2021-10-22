@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 15:40:08 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/15 16:07:41 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/22 15:44:26 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ int		is_sorted(t_stack *stack);
 void	err_func(void);
 void	free_stack(t_stack *stack);
 void	free_array(int *array, int len);
-void	swap_stack(t_stack *stack, char *str);
-void	push_stack(t_stack **stack1, t_stack **stack2, char *str);
-void	rotate_stack(t_stack **stack, char *str);
-void	reverse_rotate_stack(t_stack **stack, char *str);
+void	swap_stack(t_stack *stack, const char *str);
+void	push_stack(t_stack **stack1, t_stack **stack2, const char *str);
+void	rotate_stack(t_stack **stack, const char *str);
+void	reverse_rotate_stack(t_stack **stack, const char *str);
 void	sort_short(t_stack **stack_a, int len);
 void	sort_long(t_stack **stack, int len, int chunk);
 void	sort_b(t_stack **stack, int num);
