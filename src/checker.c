@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/12 19:13:42 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/22 15:36:52 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/22 16:07:17 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ int	main(int argc, char **argv)
 	if (stack_a == NULL)
 		err_func();
 	read_operations(&stack_a, &stack_b);
-	if (is_sorted(stack_a))
+	if (is_sorted(stack_a) && !stack_b)
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);
