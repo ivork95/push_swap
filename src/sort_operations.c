@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 18:40:15 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/22 15:34:53 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/22 17:19:08 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	rotate_stack(t_stack **stack, const char *str)
 {
 	t_stack	*tmp;
 
-	if (*stack)
+	if (*stack && (*stack)->next)
 	{
 		tmp = *stack;
 		*stack = (*stack)->next;
@@ -61,7 +61,7 @@ void	reverse_rotate_stack(t_stack **stack, const char *str)
 	t_stack	*tmp;
 	t_stack	*tmp2;
 
-	if (*stack)
+	if (*stack && (*stack)->next)
 	{
 		tmp = stack_last(*stack);
 		tmp2 = *stack;
