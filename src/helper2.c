@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/12 17:20:22 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/13 17:30:39 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/31 17:01:48 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ int	smallest_num(int *arr, int value, int len)
 
 int	is_sorted(t_stack *stack)
 {
+	if (stack == NULL)
+		return (0);
 	while (stack->next)
 	{
 		if (stack->num > stack->next->num)

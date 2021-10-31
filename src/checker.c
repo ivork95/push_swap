@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/12 19:13:42 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/22 17:17:49 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/31 16:55:23 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,8 @@ int	main(int argc, char **argv)
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 
+	if (argc <= 1)
+		return (0);
 	stack_a = fill_stack(argc, argv);
 	if (stack_a == NULL)
 		err_func();

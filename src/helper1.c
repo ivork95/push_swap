@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/13 14:39:47 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/15 16:01:37 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/31 17:13:42 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,5 @@ t_stack	*fill_stack(int argc, char **argv)
 void	err_func(void)
 {
 	write(2, "Error\n", 6);
-	exit(0);
+	exit(1);
 }
