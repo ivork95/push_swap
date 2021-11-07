@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 19:01:01 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/13 21:09:21 by ivork         ########   odam.nl         */
+/*   Updated: 2021/11/07 17:37:15 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,12 +63,3 @@ int	is_smallest(t_stack *stack, int smallest)
 	return (1);
 }
 
-void	free_array(int *array, int len)
-{
-	while (len > 0)
-	{
-		free(array);
-		array++;
-		len--;
-	}
-}

@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 15:40:08 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/22 15:44:26 by ivork         ########   odam.nl         */
+/*   Updated: 2021/11/07 17:38:59 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,6 @@ void	push_stack(t_stack **stack1, t_stack **stack2, const char *str);
 void	rotate_stack(t_stack **stack, const char *str);
 void	reverse_rotate_stack(t_stack **stack, const char *str);
 void	sort_short(t_stack **stack_a, int len);
-void	sort_long(t_stack **stack, int len, int chunk);
-void	sort_b(t_stack **stack, int num);
-void	biggest_to_top(t_stack **stack);
+void	radix_sort(t_stack **stack_a, int len);
 
 #endif

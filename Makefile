@@ -6,7 +6,7 @@
 #    By: ivork <ivork@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/05/21 18:14:25 by ivork         #+#    #+#                  #
-#    Updated: 2021/10/19 19:28:06 by ivork         ########   odam.nl          #
+#    Updated: 2021/11/07 17:39:17 by ivork         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,8 @@ NAME	=	push_swap checker
 SRCS_PS	=	src/push_swap.c\
 			src/sort_operations.c\
 			src/sort_short/sort_short.c\
-			src/sort_long/sort_long.c\
+			src/sort_long/radix_sort.c\
 			src/sort_long/sort_array.c\
-			src/sort_long/rotate_b.c\
 			src/helper.c\
 			src/helper1.c\
 			src/helper2.c\

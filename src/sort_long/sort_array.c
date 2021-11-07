@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/05 17:17:24 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/19 12:51:06 by ivork         ########   odam.nl         */
+/*   Updated: 2021/11/07 17:32:06 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,27 +62,4 @@ int	*create_sorted_array(t_stack *stack_a, int len)
 	arr = malloc(sizeof(int) * len);
 	fill_array(stack_a, arr);
 	return (sort_array(arr, len));
-}
-
-int	*remove_num(int *arr, int num, int len)
-{
-	int	i;
-	int	j;
-	int	*tmp;
-
-	tmp = malloc(sizeof(int) * len - 1);
-	i = 0;
-	j = 0;
-	while (len > 0)
-	{
-		if (arr[i] != num)
-		{
-			tmp[j] = arr[i];
-			j++;
-		}
-		i++;
-		len--;
-	}
-	free(arr);
-	return (tmp);
 }
