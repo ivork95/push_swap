@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 18:40:15 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/22 17:19:08 by ivork         ########   odam.nl         */
+/*   Updated: 2021/11/07 17:12:00 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	swap_stack(t_stack *stack, const char *str)
 {
 	int	tmp;
 
-	if (stack)
+	if (stack && stack->next)
 	{
 		tmp = stack->num;
 		stack->num = stack->next->num;
