@@ -6,14 +6,14 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/12 17:21:55 by ivork         #+#    #+#                 */
-/*   Updated: 2021/11/07 17:39:53 by ivork         ########   odam.nl         */
+/*   Updated: 2021/11/25 18:43:14 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 #include <stdlib.h>
 
-int	find_next_smallest(t_stack *stack, int num)
+static int	find_next_smallest(t_stack *stack, int num)
 {
 	int	index;
 	int	next;
@@ -34,7 +34,7 @@ int	find_next_smallest(t_stack *stack, int num)
 	return (i);
 }
 
-int	find_index_biggest(t_stack *stack)
+static int	find_index_biggest(t_stack *stack)
 {
 	int	count;
 	int	index;

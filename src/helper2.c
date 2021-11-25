@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/12 17:20:22 by ivork         #+#    #+#                 */
-/*   Updated: 2021/10/31 17:01:48 by ivork         ########   odam.nl         */
+/*   Updated: 2021/11/25 18:45:00 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	is_sorted(t_stack *stack)
 	return (1);
 }
 
-int	check_stack(t_stack *first)
+static int	check_stack(t_stack *first)
 {
 	while (!(is_smallest(first, first->next->num)))
 	{

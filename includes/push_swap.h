@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 15:40:08 by ivork         #+#    #+#                 */
-/*   Updated: 2021/11/07 17:38:59 by ivork         ########   odam.nl         */
+/*   Updated: 2021/11/25 18:49:32 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,7 @@ int		is_smallest(t_stack *stack, int smallest);
 int		is_biggest(t_stack *stack, int biggest);
 int		find_biggest(int *arr, int len);
 int		smallest_num(int *arr, int value, int len);
-int		find_index_biggest(t_stack *stack);
 int		find_index_smallest(t_stack *stack);
-int		find_next_smallest(t_stack *stack, int num);
 int		get_index(t_stack **stack, int num);
 int		is_ordered(t_stack *stack);
 int		is_sorted(t_stack *stack);
