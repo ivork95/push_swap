@@ -73,4 +73,5 @@ void	radix_sort(t_stack **stack_a, int len)
 			push_stack(&stack_b, stack_a, "pa\n");
 		bits++;
 	}
+	free_stack(stack_b);
 }
