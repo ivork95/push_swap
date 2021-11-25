@@ -15,8 +15,8 @@
 
 void	get_indexed_stack(t_stack **stack_a, int *arr, int len)
 {
-	t_stack *tmp;
-	int i;
+	t_stack	*tmp;
+	int		i;
 
 	tmp = *stack_a;
 	while (tmp)
@@ -24,7 +24,7 @@ void	get_indexed_stack(t_stack **stack_a, int *arr, int len)
 		i = 0;
 		while (len > i)
 		{
-			if(tmp->num == arr[i])
+			if (tmp->num == arr[i])
 			{
 				tmp->num = i;
 				break ;
@@ -38,7 +38,7 @@ void	get_indexed_stack(t_stack **stack_a, int *arr, int len)
 
 int	get_biggest_bit(int biggest_num)
 {
-	int bits;
+	int	bits;
 
 	bits = 0;
 	while (biggest_num >> bits != 0)
@@ -51,7 +51,7 @@ void	radix_sort(t_stack **stack_a, int len)
 	t_stack	*stack_b;
 	int		*arr;
 	int		i;
-	int 	bits;
+	int		bits;
 
 	arr = create_sorted_array(*stack_a, len);
 	stack_b = NULL;

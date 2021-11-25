@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/20 19:01:01 by ivork         #+#    #+#                 */
-/*   Updated: 2021/11/07 17:37:15 by ivork         ########   odam.nl         */
+/*   Updated: 2021/11/22 16:38:14 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,3 @@ int	is_smallest(t_stack *stack, int smallest)
 	}
 	return (1);
 }
-
